@@ -11,8 +11,8 @@ import javax.persistence.*;
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "user_id")
+    @SequenceGenerator(name = "userId", sequenceName = "user_id_seq", initialValue = 1000)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "userId")
     private Long userId;
 
     @Column

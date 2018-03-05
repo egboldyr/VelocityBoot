@@ -1,7 +1,5 @@
 package web.controller;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -20,7 +18,9 @@ import java.util.List;
 @RequestMapping("/users")
 public class UserRegistrationController {
 
-    private Logger logger = LogManager.getLogger(UserRegistrationController.class);
+    private static final String URL_USER_FORM   = "/user_form";
+    private static final String URL_USER_ADD   = "/user_add";
+    private static final String URL_USERS_LIST = "/users_list";
 
     @Autowired
     private UserRepository repository;
@@ -28,12 +28,21 @@ public class UserRegistrationController {
     @Autowired
     private UserService service;
 
-    @RequestMapping(method = RequestMethod.POST)
-    public User addUser(@RequestBody User user) {
-        return service.saveUser(user);
+    @RequestMapping(value = URL_USER_FORM, method = RequestMethod.GET)
+    public String addUserForm() {
+        return "user_add";
     }
 
-    @RequestMapping(value = "/list", method = RequestMethod.GET)
+    @RequestMapping(value = URL_USER_ADD, method = RequestMethod.POST)
+    public String addUser(
+            @RequestParam("login") String login,
+            @RequestParam("password") String password,
+            @RequestParam("email") String email) {
+        service.saveUser(new User(login, password, email));
+        return "redirect:/users_list";
+    }
+
+    @RequestMapping(value = URL_USERS_LIST, method = RequestMethod.GET)
     public String getUsers(@ModelAttribute("model") ModelMap model) {
         List<User> users = repository.findAll();
         model.addAttribute("users", users);

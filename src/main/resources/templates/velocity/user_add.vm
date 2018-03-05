@@ -1,0 +1,11 @@
+<html>
+    <fieldset>
+        <legend>New User "Form"</legend>
+        <form id="add_user_form" action="/users/user_add" method="post" autocomplete="off">
+            <label>Login:<br/><input type="text" name="login"><br/></label>
+            <label>Password:<br/><input type="password" name="password"><br/></label>
+            <label>Email:<br/><input type="text" name="email"><br/></label>
+            <input type="submit" name="submit" value="Submit">
+        </form>
+    </fieldset>
+</html>
