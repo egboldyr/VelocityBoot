@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
-import web.dao.UserRepository;
 import web.entity.User;
 import web.service.UserService;
 
@@ -18,7 +17,7 @@ import java.util.List;
 @RequestMapping("/users")
 public class UserRegistrationController {
 
-    private static final String URL_USER_FORM   = "/user_form";
+    private static final String URL_USER_FORM  = "/user_form";
     private static final String URL_USER_ADD   = "/user_add";
     private static final String URL_USERS_LIST = "/users_list";
 

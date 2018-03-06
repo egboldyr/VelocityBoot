@@ -6,7 +6,6 @@ import web.dao.UserRepository;
 import web.entity.User;
 import web.service.UserService;
 
-import javax.transaction.Transactional;
 import java.util.List;
 
 /**
