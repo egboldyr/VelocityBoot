@@ -11,6 +11,7 @@ import javax.persistence.*;
 public class User {
 
     @Id
+    @Column(name = "user_id")
     @SequenceGenerator(name = "userId", sequenceName = "user_id_seq", initialValue = 1000)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "userId")
     private Long userId;
@@ -56,5 +57,15 @@ public class User {
     }
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userId=" + userId +
+                ", login='" + login + '\'' +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
+                '}';
     }
 }

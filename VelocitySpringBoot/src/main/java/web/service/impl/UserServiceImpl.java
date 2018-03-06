@@ -6,6 +6,9 @@ import web.dao.UserRepository;
 import web.entity.User;
 import web.service.UserService;
 
+import javax.transaction.Transactional;
+import java.util.List;
+
 /**
  * Created by EGBoldyr on 05.03.18.
  */
@@ -19,5 +22,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public User saveUser(User user) {
         return userRepository.save(user);
+    }
+
+    @Override
+    public List<User> findAll() {
+        return userRepository.findAll();
     }
 }

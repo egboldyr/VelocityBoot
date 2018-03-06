@@ -23,9 +23,6 @@ public class UserRegistrationController {
     private static final String URL_USERS_LIST = "/users_list";
 
     @Autowired
-    private UserRepository repository;
-
-    @Autowired
     private UserService service;
 
     @RequestMapping(value = URL_USER_FORM, method = RequestMethod.GET)
@@ -38,13 +35,16 @@ public class UserRegistrationController {
             @RequestParam("login") String login,
             @RequestParam("password") String password,
             @RequestParam("email") String email) {
-        service.saveUser(new User(login, password, email));
+        User newUser = new User(login, password, email);
+        /* Поля из WEB-формы приходят но дальше ломаемся по SQLException (NOT NULL)
+         * проблема пока не диагностирована, переключился временно на JAX-WS + Boot*/
+        service.saveUser(newUser);
         return "redirect:/users_list";
     }
 
     @RequestMapping(value = URL_USERS_LIST, method = RequestMethod.GET)
     public String getUsers(@ModelAttribute("model") ModelMap model) {
-        List<User> users = repository.findAll();
+        List<User> users = service.findAll();
         model.addAttribute("users", users);
         return "users_list";
     }
