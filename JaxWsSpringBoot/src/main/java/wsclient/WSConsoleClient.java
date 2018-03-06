@@ -1,16 +1,12 @@
 package wsclient;
 
-import java.io.StringReader;
 import java.net.URL;
 
 import javax.xml.namespace.QName;
 import javax.xml.transform.Source;
-import javax.xml.transform.stream.StreamSource;
 import javax.xml.ws.Dispatch;
 import javax.xml.ws.Service;
 import javax.xml.ws.Service.Mode;
-
-import org.apache.cxf.staxutils.StaxUtils;
 
 public class WSConsoleClient {
 
@@ -25,5 +21,6 @@ public class WSConsoleClient {
                 Source.class, Mode.PAYLOAD);
 
         /*Осталось распарсить результат :)*/
+
     }
 }
