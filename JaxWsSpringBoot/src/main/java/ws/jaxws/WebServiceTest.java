@@ -9,10 +9,10 @@ import javax.jws.soap.SOAPBinding.Style;
  * Created by EGBoldyr on 06.03.18.
  */
 
-@WebService
+@WebService(targetNamespace = "http://service.ws.test")
 @SOAPBinding(style = Style.RPC)
 public interface WebServiceTest {
 
-    @WebMethod
+    @WebMethod(action = "urn:test")
     String test();
 }

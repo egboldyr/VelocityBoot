@@ -9,7 +9,7 @@ import javax.jws.WebService;
  * Created by EGBoldyr on 06.03.18.
  */
 
-@WebService(serviceName = "WebTest", endpointInterface = "ws.jaxws.WebServiceTest")
+@WebService(serviceName = "WebTest", portName = "PortTest", endpointInterface = "ws.jaxws.WebServiceTest")
 @Component
 public class WebServiceTestImpl implements WebServiceTest {
 
