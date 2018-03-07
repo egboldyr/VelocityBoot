@@ -5,20 +5,20 @@ import ws.jaxws.PersonWebService;
 
 import javax.xml.namespace.QName;
 import javax.xml.ws.Service;
-import javax.xml.ws.WebServiceRef;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Arrays;
 
 /**
  * Created by EGBoldyr on 07.03.18.
+ *
+ * Тестовая работающая версия Console Client для проверки WSDL сервиса
  */
 
 public class WSConsoleClientPeople {
 
     private static final String WSDL_PEOPLE_URL = "http://localhost:8090/services/peoples?wsdl";
 
-    //@WebServiceRef(wsdlLocation = WSDL_PEOPLE_URL)
     private static PersonWebService ws;
 
     public static void main(String[] args) throws MalformedURLException {
