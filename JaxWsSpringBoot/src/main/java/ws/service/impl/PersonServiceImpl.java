@@ -37,10 +37,8 @@ public class PersonServiceImpl implements PersonService {
 
         Person[] people = new Person[ids.size()];
         for (Long id : ids) {
-            people[i] = this.people.get(id);
-            System.out.println(people[i++]);
+            people[i++] = this.people.get(id);
         }
-
 
         return people;
     }

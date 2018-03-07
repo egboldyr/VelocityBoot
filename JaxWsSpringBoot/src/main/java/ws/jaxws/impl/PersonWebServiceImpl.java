@@ -24,9 +24,6 @@ public class PersonWebServiceImpl implements PersonWebService {
         if (person == null) {
             return false;
         }
-        System.out.println("**************************************");
-        System.out.println("------>>>>> " + person + "<<<<<-------");
-        System.out.println("**************************************");
         service.add(person);
         return true;
     }
