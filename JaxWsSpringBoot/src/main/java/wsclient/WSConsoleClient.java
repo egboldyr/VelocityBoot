@@ -20,7 +20,7 @@ public class WSConsoleClient {
                 new QName("http://impl.jaxws.ws/" , "PortTest"),
                 Source.class, Mode.PAYLOAD);
 
-        /*Осталось распарсить результат :)*/
+
 
     }
 }

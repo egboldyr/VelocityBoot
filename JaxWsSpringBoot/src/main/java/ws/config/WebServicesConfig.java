@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.ws.config.annotation.EnableWs;
+import ws.jaxws.PersonWebService;
 import ws.jaxws.WebServiceTest;
 import ws.jaxws.impl.WebServiceTestImpl;
 
@@ -25,10 +26,14 @@ public class WebServicesConfig {
     @Autowired
     private WebServiceTest webServiceTest;
 
+    @Autowired
+    private PersonWebService webPeoples;
+
     @Bean
     public Endpoint endpoint() {
-        EndpointImpl endpoint = new EndpointImpl(bus, webServiceTest);
-        endpoint.publish("/web_service_test");
+        EndpointImpl endpoint = new EndpointImpl(bus);
+        endpoint.publish("/web_service_test", webServiceTest);
+        endpoint.publish("/peoples", webPeoples);
         return endpoint;
     }
 }
