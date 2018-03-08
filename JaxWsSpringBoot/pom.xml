@@ -90,14 +90,14 @@
                 <executions>
                     <!-- WSDL - генерация-->
                     <execution>
-                        <id>generate-wsdl</id>
+                        <id>PersonWebServiceImp</id>
                         <phase>process-classes</phase>
                         <goals>
                             <goal>wsgen</goal>
                         </goals>
                         <configuration>
                             <sei>ws.jaxws.impl.PersonWebServiceImpl</sei>
-                            <genWSDL>true</genWSDL>
+                            <genWsdl>true</genWsdl>
                         </configuration>
                     </execution>
                 </executions>
@@ -105,7 +105,8 @@
                 <configuration>
                     <keep>true</keep>
                     <verbose>true</verbose>
-                    <destDir>${project.basedir}/src/main/resources/wsdl</destDir>
+                    <resourceDestDir>${project.basedir}/src/main/resources/wsdl</resourceDestDir>
+                    <destDir>${project.build.outputDirectory}</destDir>
                 </configuration>
 
                 <dependencies>
