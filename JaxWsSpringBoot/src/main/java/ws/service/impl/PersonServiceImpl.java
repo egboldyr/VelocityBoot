@@ -18,7 +18,6 @@ public class PersonServiceImpl implements PersonService {
 
     private static Map<Long, Person> people = new HashMap<Long, Person>();
 
-
     @Override
     public boolean add(Person person) {
         people.put(person.getId(), person);
