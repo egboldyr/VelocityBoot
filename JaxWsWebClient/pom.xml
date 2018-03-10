@@ -64,4 +64,28 @@
 
     </dependencies>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>jaxws-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>wsimport</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <!-- Уточнить о конфигурации через директорию-->
+                    <!--<wsdlDirectory>${basedir}/src/main/resources/wsdl</wsdlDirectory>-->
+                    <wsdlUrls>http://localhost:8095/services/contacts?wsdl</wsdlUrls>
+                    <packageName>web.jaxws</packageName>
+                    <sourceDestDir>${basedir}/src/main/java</sourceDestDir>
+                    <keep>true</keep>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
