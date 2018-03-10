@@ -3,12 +3,13 @@ package ws.entity;
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "CONTACTS")
 @XmlRootElement(name = "Contact")
 @XmlType(propOrder = {"id", "name", "surname", "phone", "email"})
-public class Contact {
+public class Contact implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

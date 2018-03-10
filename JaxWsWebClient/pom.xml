@@ -79,7 +79,9 @@
                 <configuration>
                     <!-- Уточнить о конфигурации через директорию-->
                     <!--<wsdlDirectory>${basedir}/src/main/resources/wsdl</wsdlDirectory>-->
-                    <wsdlUrls>http://localhost:8095/services/contacts?wsdl</wsdlUrls>
+                    <wsdlUrls>
+                        <wsdlUrl>http://localhost:8095/services/contacts?wsdl</wsdlUrl>
+                    </wsdlUrls>
                     <packageName>web.jaxws</packageName>
                     <sourceDestDir>${basedir}/src/main/java</sourceDestDir>
                     <keep>true</keep>
