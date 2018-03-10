@@ -1,0 +1,4 @@
+#parse("templates/velocity/header.vm")
+<body>
+    <span>Hello, People!</span>
+</body>
