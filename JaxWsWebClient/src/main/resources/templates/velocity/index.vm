@@ -1,4 +1,9 @@
 #parse("templates/velocity/header.vm")
 <body>
-    <span>Hello, People!</span>
+    <div class="div_left">
+        #parse("templates/velocity/contacts_list.vm")
+    </div>
+    <div class="div_right">
+        #parse("templates/velocity/contacts_form.vm")
+    </div>
 </body>

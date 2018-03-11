@@ -1,3 +1,22 @@
 <head>
-    <title>People - WebClient</title>
+    <title>ContactsBook - WebClient</title>
+
+    #*<style type="text/css">
+        @import url("/templates/velocity/сss/index.css");
+    </style>*#
+    #*<link rel="stylesheet" href="/templates/velocity/сss/index.css">*#
+    #*<link href="сss/index.css" rel="stylesheet">*#
+
+    <style>
+        .div_left {
+            width: 60%;         /*Ширина блока в пределах WEB-страницы*/
+            float: left;        /*Выравнивание */
+        }
+
+        .div_right {
+            width: 38%;
+            float: right;
+        }
+    </style>
+
 </head>

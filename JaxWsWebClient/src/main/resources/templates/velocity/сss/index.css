@@ -1,0 +1,9 @@
+.div_left {
+    width: 60%;         /*Ширина блока в пределах WEB-страницы*/
+    float: left;        /*Выравнивание */
+}
+
+.div_right {
+    width: 39%;
+    float: right;
+}
