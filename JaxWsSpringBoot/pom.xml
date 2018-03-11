@@ -100,6 +100,18 @@
                             <genWsdl>true</genWsdl>
                         </configuration>
                     </execution>
+                    <!-- Новый сервис для примера с отдальным WEB-клиентом-->
+                    <execution>
+                        <id>ContactWSImpl</id>
+                        <phase>process-classes</phase>
+                        <goals>
+                            <goal>wsgen</goal>
+                        </goals>
+                        <configuration>
+                            <sei>ws.jaxws.impl.ContactWSImpl</sei>
+                            <genWsdl>true</genWsdl>
+                        </configuration>
+                    </execution>
                 </executions>
 
                 <configuration>
