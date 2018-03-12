@@ -30,7 +30,7 @@ input[type=text] {
     padding: 3px 3px 3px 3px;               /*Отступ от края компонента*/
 }
 
-input[type=submit] {
+input[type=submit]  {
     width: 100%;                            /*Ширина относительно блока*/
     margin: 5px 5px;                        /*Отступ от края блока*/
     padding: 10px 10px;                     /*Отступ от края компонента*/

@@ -1,10 +1,10 @@
 <fieldset>
     <legend>New Contact Form</legend>
-    <form action="/new_contact" method="post" autocomplete="off">
-        <label>Name:   <br/><input type="text" name="name">   <br/></label>
-        <label>Surname:<br/><input type="text" name="surname"><br/></label>
-        <label>Phone:  <br/><input type="text" name="phone">  <br/></label>
-        <label>Email:  <br/><input type="text" name="email">  <br/></label>
-        <input type="submit" name="submit" value="Create">
+    <form id="ajaxForm" onsubmit="return createNewContact(event)">
+        <label>Name:   <br/><input type="text" id="name">   <br/></label>
+        <label>Surname:<br/><input type="text" id="surname"><br/></label>
+        <label>Phone:  <br/><input type="text" id="phone">  <br/></label>
+        <label>Email:  <br/><input type="text" id="email">  <br/></label>
+        <input type="submit" value="Create"">
     </form>
 </fieldset>
