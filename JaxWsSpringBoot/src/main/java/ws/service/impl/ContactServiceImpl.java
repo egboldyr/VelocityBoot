@@ -6,6 +6,8 @@ import ws.dao.ContactDAO;
 import ws.entity.Contact;
 import ws.service.ContactService;
 
+import java.util.List;
+
 @Service
 public class ContactServiceImpl implements ContactService {
 
@@ -48,6 +50,11 @@ public class ContactServiceImpl implements ContactService {
 
     @Override
     public Contact[] findAll() {
-        return (Contact[]) dao.findAll().toArray();
+        List<Contact> contacts =  dao.findAll();
+        Contact[] result = new Contact[contacts.size()];
+        for (int i = 0; i < contacts.size(); i++) {
+            result[i] = contacts.get(i);
+        }
+        return result;
     }
 }
