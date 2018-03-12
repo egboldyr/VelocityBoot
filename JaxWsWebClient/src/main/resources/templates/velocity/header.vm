@@ -1,54 +1,12 @@
 <head>
     <title>ContactsBook - WebClient</title>
-
-    #*<style type="text/css">
-        @import url("/templates/velocity/сss/index.css");
-    </style>*#
-    #*<link rel="stylesheet" href="/templates/velocity/сss/index.css">*#
-    #*<link href="сss/index.css" rel="stylesheet">*#
-
-    <style>
-        .div_left {
-            width: 60%;                             /*Ширина блока в пределах WEB-страницы*/
-            float: left;                            /*Выравнивание*/
-        }
-
-        .div_right {
-            width: 38%;                             /*Ширина блока в пределах WEB-страницы*/
-            float: right;                           /*Выравнивание*/
-        }
-
-        fieldset {
-            background-color: #d2b48c;              /*Фон*/
-            border-color: #deb887;                  /*Цвет рамки*/
-            border-radius: 15px;                    /*Закругление рамки */
-            text-align: left;                       /*Выравнивание содержимого*/
-            font-family: "Times New Roman", serif;  /*Выбор шрифта*/
-        }
-
-        legend {
-            background-color: #d2b48c;              /*Фон*/
-            border: 1px solid #deb887;              /*Рамка*/
-            border-radius: 5px;                     /*Закругление рамки */
-            font-size: 16px;                        /*Размер шрифта*/
-            font-family: "Times New Roman", serif;  /*Выбор шрифта*/
-        }
-
-        input[type=text] {
-            width: 100%;                            /*Ширина относительно блока*/
-            margin: 5px 5px 5px 5px;                /*Отступ от края блока*/
-            padding: 3px 3px 3px 3px;               /*Отступ от края компонента*/
-        }
-
-        input[type=submit] {
-            width: 100%;                            /*Ширина относительно блока*/
-            margin: 5px 5px;                        /*Отступ от края блока*/
-            padding: 10px 10px;                     /*Отступ от края компонента*/
-            font-family: "Times New Roman", serif;  /*Выбор шрифта*/
-            font-size: 20px;                        /*Размер шрифта*/
-            background-color: #f4a460;              /*Фон*/
-            color: #ffffff;                         /*Цвет текста на кнопке*/
-            border-radius: 5px;                     /*Закругление кнопки*/
-        }
+    #*Импорт JS файлов и библиотек*#
+    <script>
+        #include("/templates/velocity/js/lib/jquery-3.3.1.js");
+        #include("/templates/velocity/js/index.js")
+    </script>
+    #*Импорт CSS файлов*#
+    <style type="text/css">
+        #include("/templates/velocity/css/index.css");
     </style>
 </head>
