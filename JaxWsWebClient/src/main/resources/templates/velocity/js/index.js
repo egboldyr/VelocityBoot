@@ -43,5 +43,11 @@ function processContacts(result) {
         row.insertCell(2).innerHTML = contacts[i].surname;
         row.insertCell(3).innerHTML = contacts[i].phone;
         row.insertCell(4).innerHTML = contacts[i].email;
+        /*Кнопки Edit и Delete*/
+        row.insertCell(5).innerHTML =
+            "<div class='input_div'>" +
+            "     <input class='input_edit'   type='button' value='Edit'>" +
+            "     <input class='input_delete' type='button' value='Delete'></div>";
+
     }
 }

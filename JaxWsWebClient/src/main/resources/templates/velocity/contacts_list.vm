@@ -1,7 +1,7 @@
 <fieldset>
     <legend>Contacts List</legend>
     <p class="p_class">
-        <input type="button" onclick="getAllContacts()" value="Refresh">
+        <input class="interface_buttons" type="button" onclick="getAllContacts()" value="Refresh">
     </p>
     <table id="contacts" class="paleBlueRows">
         <thead>
@@ -11,6 +11,7 @@
                 <th>Surname</th>
                 <th>Phone</th>
                 <th>Email</th>
+                <th>Edit/Delete</th>
             </tr>
         </thead>
     </table>

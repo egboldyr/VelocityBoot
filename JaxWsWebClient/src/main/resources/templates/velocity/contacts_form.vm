@@ -5,6 +5,6 @@
         <label>Surname:<br/><input type="text" id="surname"><br/></label>
         <label>Phone:  <br/><input type="text" id="phone">  <br/></label>
         <label>Email:  <br/><input type="text" id="email">  <br/></label>
-        <input type="submit" value="Create"">
+        <input class="interface_buttons" type="submit" value="Create"">
     </form>
 </fieldset>
