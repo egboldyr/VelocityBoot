@@ -1,6 +1,6 @@
 <fieldset>
     <legend>New Contact Form</legend>
-    <form id="ajaxForm" onsubmit="return createNewContact(event)">
+    <form class="form_class" onsubmit="return createNewContact(event)">
         <label>Name:   <br/><input type="text" id="name">   <br/></label>
         <label>Surname:<br/><input type="text" id="surname"><br/></label>
         <label>Phone:  <br/><input type="text" id="phone">  <br/></label>
