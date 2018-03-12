@@ -14,17 +14,18 @@ body {
 
 fieldset {
     background-color: #6495ed;              /*Фон*/
-    border-color: #1e90ff;                  /*Цвет рамки*/
-    border-radius: 15px;                    /*Закругление рамки */
+    border-radius: 10px;                    /*Закругление рамки */
+    border: 6px solid #305A72;              /*Цвет рамки*/
     text-align: left;                       /*Выравнивание содержимого*/
     font-family: "Times New Roman", serif;  /*Выбор шрифта*/
 }
 
 legend {
     background-color: #6495ed;              /*Фон*/
-    border: 1px solid #1e90ff;              /*Рамка*/
-    border-radius: 5px;                     /*Закругление рамки */
-    font-size: 16px;                        /*Размер шрифта*/
+    border-radius: 10px;                    /*Закругление рамки */
+    border: 6px solid #305A72;              /*Цвет рамки*/
+    font-size: 20px;                        /*Размер шрифта*/
+    padding: 5px;
     font-family: "Times New Roman", serif;  /*Выбор шрифта*/
 }
 
@@ -89,7 +90,7 @@ table.paleBlueRows thead th:first-child {
 
 /*Сгенерированый стиль для формы*/
 .form_class{
-    max-width: 450px;
+    max-width: 100%;
     background: #FAFAFA;
     padding: 30px;
     box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
