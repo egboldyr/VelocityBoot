@@ -34,32 +34,33 @@ input[type=text] {
     padding: 3px 3px 3px 3px;               /*Отступ от края компонента*/
 }
 
-input[type=submit]  {
+input[type=submit], input[type=button]  {
     width: 100%;                            /*Ширина относительно блока*/
     margin: 5px 5px;                        /*Отступ от края блока*/
     padding: 10px 10px;                     /*Отступ от края компонента*/
     font-family: "Times New Roman", serif;  /*Выбор шрифта*/
-    font-size: 20px;                        /*Размер шрифта*/
+    font-size: 16px;                        /*Размер шрифта*/
     color: #ffffff;                         /*Цвет текста на кнопке*/
     background-color: #0B6FA4;              /*Фон*/
     border-radius: 5px;                     /*Закругление кнопки*/
 }
 
-input[type=button] {
-    font-family: "Times New Roman", serif;  /*Выбор шрифта*/
-    font-size: 14px;                        /*Размер шрифта*/
-    color: #ffffff;                         /*Цвет текста на кнопке*/
-    background-color: #0B6FA4;              /*Фон*/
-    border-radius: 5px;                     /*Закругление кнопки*/
+.p_class {
+    background: #FAFAFA;
+    padding: 15px;
+    box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
+    border: 6px solid #305A72;
 }
 
 /*Таблицы сгенерировано в редакторе*/
 table.paleBlueRows {
-    font-family: "Times New Roman", Times, serif;
-    border: 1px solid #FFFFFF;
+    background: #FAFAFA;
+    padding: 30px;
     width: 100%;
-    text-align: center;
-    border-collapse: collapse;
+    box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
+    border: 6px solid #305A72;
 }
 table.paleBlueRows td, table.paleBlueRows th {
     border: 1px solid #FFFFFF;
