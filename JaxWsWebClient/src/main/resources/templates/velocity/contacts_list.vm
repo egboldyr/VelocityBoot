@@ -1,4 +1,15 @@
 <fieldset>
     <legend>Contacts List</legend>
-
+    <p><input type="button" onclick="getAllContacts()" value="Refresh"></p>
+    <table id="contacts" class="paleBlueRows">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Phone</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+    </table>
 </fieldset>

@@ -1,4 +1,4 @@
-/*Script для создания нового контакта*/
+/*Script @Создания нового контакта@*/
 function createNewContact(event) {
     jQuery.ajax({
         type: 'POST',
@@ -18,7 +18,7 @@ function createNewContact(event) {
     });
 }
 
-/*Получение всех записей контактов из БД*/
+/*Script @Получение всех записей контактов из БД@*/
 function getAllContacts() {
     jQuery.ajax({
         type: 'GET',

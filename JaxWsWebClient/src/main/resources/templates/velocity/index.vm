@@ -1,6 +1,6 @@
 <html>
     #parse("templates/velocity/header.vm")
-    <body>
+    <body onload="getAllContacts()">
         <div class="div_left">
             #parse("templates/velocity/contacts_list.vm")
         </div>
