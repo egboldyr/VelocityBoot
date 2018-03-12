@@ -8,6 +8,10 @@
     float: right;                           /*Выравнивание*/
 }
 
+body {
+    background-color: #a9a9a9;
+}
+
 fieldset {
     background-color: #d2b48c;              /*Фон*/
     border-color: #deb887;                  /*Цвет рамки*/
@@ -36,7 +40,15 @@ input[type=submit]  {
     padding: 10px 10px;                     /*Отступ от края компонента*/
     font-family: "Times New Roman", serif;  /*Выбор шрифта*/
     font-size: 20px;                        /*Размер шрифта*/
-    background-color: #f4a460;              /*Фон*/
     color: #ffffff;                         /*Цвет текста на кнопке*/
+    background-color: #f4a460;              /*Фон*/
+    border-radius: 5px;                     /*Закругление кнопки*/
+}
+
+input[type=button] {
+    font-family: "Times New Roman", serif;  /*Выбор шрифта*/
+    font-size: 14px;                        /*Размер шрифта*/
+    color: #ffffff;                         /*Цвет текста на кнопке*/
+    background-color: #e9967a;              /*Фон*/
     border-radius: 5px;                     /*Закругление кнопки*/
 }
