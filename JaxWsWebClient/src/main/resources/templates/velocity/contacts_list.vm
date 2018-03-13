@@ -14,5 +14,8 @@
                 <th>Edit/Delete</th>
             </tr>
         </thead>
+        <tbody id="contacts_body">
+
+        </tbody>
     </table>
 </fieldset>
