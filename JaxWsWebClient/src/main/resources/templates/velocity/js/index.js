@@ -2,7 +2,8 @@
 function createNewContact(event) {
     jQuery.ajax({
         type: 'POST',
-        url: '/new_contact',
+        /*url: '/new_contact',*/                                                               /*SpringBoot Controller*/
+        url: '/ws_new',                                                                        /*HttpServlet*/
         data: {
             name:    jQuery("#name").val(),
             surname: jQuery('#surname').val(),
@@ -72,7 +73,7 @@ function deleteRow(event, btn) {
      * получить ссылку на строку :(*/
     var row = btn.parentNode.parentNode.parentNode;
     var contactId = row.getElementsByTagName("td")[0].innerHTML;
-    alert(contactId);
+
     jQuery.ajax({
          type: 'POST',
          url:  '/delete_contact',
