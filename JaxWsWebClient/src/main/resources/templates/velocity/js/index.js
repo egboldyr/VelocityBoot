@@ -76,16 +76,20 @@ function deleteRow(event, btn) {
     var contactId = row.getElementsByTagName("td")[0].innerHTML;
 
     jQuery.ajax({
-         type: 'POST',
-         /*url:  '/delete_contact',*/                                                          /*SpringBoot Controller*/
-         url:  '/ws/delete',                                                                   /*HttpServlet*/
-         data: {
-            id: contactId
-         },
-         success: function (response) {
-             event.preventDefault();
-             console.log(response);
-         }
+        type: 'POST',
+        /*url:  '/delete_contact',*/                                                           /*SpringBoot Controller*/
+        url:  '/ws/delete',                                                                    /*HttpServlet*/
+        data: {
+           id: contactId
+        },
+        success: function (response) {
+            event.preventDefault();
+            console.log(response);
+            row.parentNode.removeChild(row);
+        },
+        error: function (jqXhr, textStatus, errorThrown) {
+            console.log( errorThrown );
+        }
     });
-    row.parentNode.removeChild(row);
+
 }
