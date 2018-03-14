@@ -20,7 +20,7 @@ public class ContactServiceImpl implements ContactService {
     private ContactDAO dao;
 
     @Override
-    @CachePut
+    @CacheEvict(allEntries = true)
     public Long create(Contact contact) {
         if (contact != null) {
             return dao.create(contact);
