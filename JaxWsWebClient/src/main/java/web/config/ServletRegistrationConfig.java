@@ -1,8 +1,11 @@
 package web.config;
 
+import org.springframework.boot.autoconfigure.web.DispatcherServletAutoConfiguration;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.DispatcherServlet;
+import web.servlet.ServletAllContacts;
 import web.servlet.ServletNewContact;
 
 import java.util.Arrays;
@@ -18,10 +21,14 @@ import java.util.Arrays;
 public class ServletRegistrationConfig {
 
     @Bean
+    public DispatcherServlet dispatcherServlet() {
+        return new DispatcherServlet();
+    }
+
+    @Bean
     public ServletRegistrationBean registration() {
-        ServletRegistrationBean regist = new ServletRegistrationBean();
-        regist.setServlet(new ServletNewContact());
-        regist.setUrlMappings(Arrays.asList("/ws_new"));
+        ServletRegistrationBean regist = new ServletRegistrationBean(dispatcherServlet(), "/ws/*");
+        regist.setName(DispatcherServletAutoConfiguration.DEFAULT_DISPATCHER_SERVLET_REGISTRATION_BEAN_NAME);
         return regist;
     }
 }
