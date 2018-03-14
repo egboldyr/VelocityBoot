@@ -17,6 +17,7 @@ public class IndexController {
 
     private static final String URL_INDEX = "/";
     private static final String URL_NEW_CONTACT = "/new_contact";
+    private static final String URL_EDIT_CONTACT = "/edit_contact";
     private static final String URL_DELETE_CONTACT = "/delete_contact";
     private static final String URL_ALL_CONTACTS = "/all_contacts";
 
@@ -43,6 +44,24 @@ public class IndexController {
         contact.setEmail(email);
 
         ws.create(contact);
+    }
+
+    @RequestMapping(value = URL_EDIT_CONTACT, method = RequestMethod.POST)
+    @ResponseStatus(value = HttpStatus.OK)
+    public void editContact(
+            @RequestParam("id") Long id,
+            @RequestParam("name") String name,
+            @RequestParam("surname") String surname,
+            @RequestParam("phone") String phone,
+            @RequestParam("email") String email) {
+
+        Contact contact = ws.read(id);
+        contact.setName(name);
+        contact.setSurname(surname);
+        contact.setPhone(phone);
+        contact.setEmail(email);
+
+        ws.update(contact);
     }
 
     @RequestMapping(value = URL_DELETE_CONTACT, method = RequestMethod.POST)
