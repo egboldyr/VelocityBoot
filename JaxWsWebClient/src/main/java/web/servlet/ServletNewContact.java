@@ -20,7 +20,7 @@ import java.io.IOException;
  * Если необходима замена на Spring Controller (ее нужно будет сделать в index.js)
  */
 
-@WebServlet("/ws_new")
+@WebServlet("/ws/new")
 public class ServletNewContact extends HttpServlet {
 
     private ContactWS contactWS = new ContactWS();
