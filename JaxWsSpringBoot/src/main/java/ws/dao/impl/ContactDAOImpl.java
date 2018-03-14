@@ -5,6 +5,7 @@ import org.hibernate.SessionFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import ws.dao.ContactDAO;
@@ -28,6 +29,7 @@ public class ContactDAOImpl implements ContactDAO {
     }
 
     @Override
+    @Cacheable(value = "contactReadCache", key = "#id")
     public Contact read(Long id) {
         logger.info("Get Contact by ID [" + id + "]");
         return factory.getCurrentSession().get(Contact.class, id);
@@ -64,6 +66,7 @@ public class ContactDAOImpl implements ContactDAO {
     }
 
     @Override
+    @Cacheable(value = "contacts")
     public List<Contact> findAll() {
         logger.info("Getting all Contact records...");
         return factory
