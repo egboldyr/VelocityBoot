@@ -3,7 +3,7 @@ function createNewContact(event) {
     jQuery.ajax({
         type: 'POST',
         /*url: '/new_contact',*/                                                               /*SpringBoot Controller*/
-        url: '/ws_new',                                                                        /*HttpServlet*/
+        url: '/ws/new',                                                                        /*HttpServlet*/
         data: {
             name:    jQuery("#name").val(),
             surname: jQuery('#surname').val(),
@@ -23,7 +23,8 @@ function createNewContact(event) {
 function getAllContacts() {
     jQuery.ajax({
         type: 'GET',
-        url: '/all_contacts',
+        /*url: '/all_contacts',*/                                                              /*SpringBoot Controller*/
+        url: '/ws/all',                                                                        /*HttpServlet*/
         success: function (response) {
             processContacts(response);
         },
@@ -76,7 +77,8 @@ function deleteRow(event, btn) {
 
     jQuery.ajax({
          type: 'POST',
-         url:  '/delete_contact',
+         /*url:  '/delete_contact',*/                                                          /*SpringBoot Controller*/
+         url:  '/ws/delete',                                                                   /*HttpServlet*/
          data: {
             id: contactId
          },
