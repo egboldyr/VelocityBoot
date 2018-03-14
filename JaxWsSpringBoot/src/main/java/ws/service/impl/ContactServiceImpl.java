@@ -1,6 +1,8 @@
 package ws.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import ws.dao.ContactDAO;
 import ws.entity.Contact;
@@ -23,6 +25,7 @@ public class ContactServiceImpl implements ContactService {
     }
 
     @Override
+    @Cacheable(value = "contactCache", key = "#id")
     public Contact read(Long id) {
         if (id != null) {
             return dao.read(id);
@@ -31,6 +34,7 @@ public class ContactServiceImpl implements ContactService {
     }
 
     @Override
+    @CacheEvict(cacheNames = "contactCache", key = "#p0.id")
     public boolean update(Contact contact) {
         if (contact == null) {
             return false;
@@ -40,6 +44,7 @@ public class ContactServiceImpl implements ContactService {
     }
 
     @Override
+    @CacheEvict(cacheNames = "contactCache", key = "#p0.id")
     public boolean delete(Contact contact) {
         if (contact == null) {
             return false;
